@@ -3,8 +3,10 @@
   "version": "0.0.1-SNAPSHOT",
   "description": "A discord bot in javascript",
   "main": "src/Bot.js",
+  "type": "module",
   "scripts": {
-    "start": "node src/Bot.js run()",
+    "dev": "nodemon --es-module-specifier-resolution=node src/Bot.js",
+    "start": "node --es-module-specifier-resolution=node src/Bot.js",
     "test": "echo pas de test pour l'instant && exit 1"
   },
   "author": "nathan-flacher",
@@ -17,6 +19,7 @@
     "dotenv": "^16.0.0"
   },
   "devDependencies": {
+    "nodemon": "^2.0.15",
     "eslint": "^8.12.0"
   }
 }
